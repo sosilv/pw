@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="subscribe()">Subscribe</button>
+    <button onclick="subscr()">Subscribe</button>
+    <button onclick="subsc"></button>
 
     <script>
         addEventListener('load',async() =>{
@@ -15,7 +16,7 @@
             console.log(sw);
         });
 
-        async function subscribe(){
+        async function subscr(){
             let sw = await navigator.serviceWorker.register('./sw.js');
             let push  = await sw.pushManager.subscribe({
                 userVisibleOnly:true,
