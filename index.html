@@ -14,6 +14,16 @@
             let sw = await navigator.serviceWorker.register('./sw.js');
             console.log(sw);
         });
+
+        async function subscribe(){
+            let sw = await navigator.serviceWorker.register('./sw.js');
+            let push  = await sw.pushManager.subscribe({
+                userVisibleOnly:true,
+                applicationServerKey:'BKrA8bGLEAgzhFUbJilMYshzHs_BJq29-9rbIS_29_o5Cx9d2ZP3hawF_SoRtLOvAF6Wp7VqRTJMPdmxrmcApvQ'
+ 
+            });
+            console.log(JSON.stringify(push));            
+        }
     </script>
 </body>
 </html>
